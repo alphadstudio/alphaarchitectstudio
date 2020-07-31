@@ -1,12 +1,19 @@
 /*//////////////////////////////////////////////////////////////// offset ////////////////////////////////////////////////////////////////////////*/  
-
+html, body {
+  overflow-x:hidden 
+} 
 html {
-  overflow-x: hidden;
+ 
   scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 body {
-  
-    position: relative;
+  position: absolute;
+
+  width: 100vw;  
   line-height: 1.7;
   color: #6c7b95 !important;
   font-weight: 300;
@@ -39,6 +46,8 @@ h1, h2, h3, h4, h5,
     overflow:hidden;
   }
   .navbar{
+    margin: 0;
+    width: 100%;
     padding: 20px 10px; /* Large padding which will shrink on scroll (using JS) */
     transition: 0.4s; /* Adds a transition effect when the padding is decreased */
   }
@@ -63,7 +72,7 @@ h1, h2, h3, h4, h5,
       padding-left: 1rem;
       overflow-y: auto;
       visibility: hidden;
-      background-color: rgb(14, 9, 78);
+      background-color: rgb(143, 143, 143);
       transition: visibility .2s ease-in-out, transform .2s ease-in-out;
     }
     .navbar-collapse.show {
@@ -384,7 +393,11 @@ box-shadow: 2px -1px 33px -3px rgba(0,0,0,0.75);
 .portfolio{
   padding:10% 0 10% 0;
 }
-
+@media only screen and (max-width: 600px) {
+  .portfolio{
+    padding:30% 0 10% 0;
+  }
+}
 .section-tittle2 span.back-text {
   -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
   font-family: "Barlow",sans-serif;
@@ -522,6 +535,7 @@ box-shadow: 2px -1px 33px -3px rgba(0,0,0,0.75);
   transform: translateY(-114%);
   
 }
+
 .section-tittle4 .front-text h2 {
   position: relative;
   z-index: 2;
@@ -534,8 +548,9 @@ box-shadow: 2px -1px 33px -3px rgba(0,0,0,0.75);
 }
 @media only screen and (max-width: 600px) {
   .section-tittle4 span.back-text {
-    font-size: 70px;
+    font-size: 63px;
   font-weight: 700;
+  transform: translateY(-300%);
   }
   .section-tittle4 .front-text h2 {
     font-size: 50px;
@@ -668,7 +683,7 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-bottom: 68px;
+  
 }
 
 .contact100-form-title {
